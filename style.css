@@ -1,0 +1,38 @@
+body {
+    font-family: sans-serif;
+    background-color: #f0f5f9;
+    color: #222;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 28px;
+    color: #2c3e50;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  h2 {
+    font-size: 22px;
+    color: #34495e;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+    margin-top: 30px;
+  }
+  
+  p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  a {
+    color: green;
+    text-decoration: none;
+  }
+  
+  a:visited {
+    color: red;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
