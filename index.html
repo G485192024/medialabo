@@ -20,8 +20,10 @@
     </p>
     <h2>数あてゲーム</h2>
     <p>講義資料のkazuate.jsを丸コピーして課題を完成する形になっているのだが、気をつけてない間にタイトルのkazuate.jsまでコピーしそのまま貼り付けた。コンソール実行時に何度やってもエラーが出て、絶望のような時間を過ごしました、でも先輩に聞いてたら、どのくらい簡単なミスをしたかと意識して、本当に悔しかった。。
-      課題自体は難しくないと思う。ほどんどjavaの書き方と変わらないSystem.out.println()をconsole.log()にすればよくて、あとは比較の時＝は三つ使うように注意しましま
-
+      課題自体は難しくないと思う。ほどんどjavaの書き方と変わらないSystem.out.println()をconsole.log()にすればよくて、あとは比較の時＝は三つ使うように注意しましまた。<br>
+      課題４−１更新：課題４−１ではhtmlに<input type="text" id="keyword">
+                              <button id="botan">検索</button>を書き足して検索欄を作りました。また、document.querySelector()を使ってHTMLの検索欄やボタンなどの要素を取得します。最後に、let botan = document.querySelector('#botan');
+botan.onclick = function() {}の中に、入力された値を読み込み、判定、出力する機能などの処理を書き込み、これで、ボタンを押すたびに{}の中のイベントが実行され、ユーザの入力に応じて反応することができました。
     </p>
     <p>数あてゲームのページ：
       <a
@@ -56,7 +58,7 @@
       }でできました。そのほかにもborder-bottomの変更、padding、height、widthなどを学びました</p>
       <p>演習の成果：
         <a
-        href="practice-css/browser-intro.html "
+        href="practice-css/browser-intro.html"
         title="演習2-3のHTMLファイルです"
         target="_blank">演習2-3のHTMLファイル
       </a>
@@ -69,12 +71,28 @@
     </p>
     <p>演習の成果：
       <a
-      href="practice-js/obj-practice.html "
+      href="practice-js/obj-practice.html"
       title="演習3-6のHTMLファイルです"
       target="_blank">演習3-6のHTMLファイル
     </a>
     </p>
     <h2>第4回 DOM と JavaScript</h2>
+    4回目の授業です、あど二週でhtmlの授業が終わりますが、まだまだ自分のページにいろんな不足があります。今週の課題はちょっと時間かかりすぎました。まず、htmlに <label for="shimei">氏名: </label>
+    <input type="text" name="shimei" id="shimei" size="10">
+    <button id="print">表示</button>
+    <p id="message">メッセージ
+    を書き足して検索欄を作ることができました。inputは入力項目で、typeの属性値での入力の種類を決めることができます。例えば、textはテキストボックス、colorは色など。ブラウザによって、入力画面も違います。
+    そして、document.querySelector()、カコの中にhtmlの要素名を書き込んで、その要素を取得することができます、let 変数名 = document.querySelector()で変数名にhtmlの要素を代入することが一般的な使い方です。
+    また、function 名前{イベント}や変数名 = document.querySelector('button#ボタンの名前');
+    変数名.addEventListener('click', 名前);でイベントハンドラを登録することができます。今回はこれを使って数あてゲームでボタンを押すと入力により出力をすることができるようにしました。
+    </p>
+    <p>演習の成果：
+      <a
+      href="practice-eventdom/tashizan.html"
+      title="演習4-10のHTMLファイルです"
+      target="_blank">演習4-10のHTMLファイル
+    </a>
+    </p>
     <h2>第5回 イベント処理</h2>
   </body>
 </html>
