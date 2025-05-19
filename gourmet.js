@@ -15,6 +15,36 @@ function print(data) {
     console.log("キャッチコピー: " + shop.catch);
   }
 }
+//課題４−２
+let botan = document.querySelector('#botan');
+botan.onclick = function() {
+  let input = document.querySelector('#keyword');
+  let keyword = input.value;
+
+  let answer = "";
+  let ken = 0;
+  let shops = data.results.shop;
+  let result = document.querySelector('#result');
+
+  for (let i = 0;i < shops.length; i++) {
+    let shop = shops[i]
+    if (shop.genre.name == keyword) {
+      ken = ken + 1;
+    }
+  }
+
+  if (keyword == "") {
+    answer = "キーワードを入力してください。";
+  }else if (ken == 0) {
+    answer = "該当するお店ありません。";
+  }else {
+    answer = "ken + 件ビットしました。";
+  }
+
+  result.textContent = answer;
+  console.log("検索キー: " + keyword);
+
+}
 // 課題5-1 の関数 printDom() はここに記述すること
 function printDom(data) {
 
