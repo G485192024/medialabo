@@ -37,7 +37,7 @@ function Shop() {
   }else if (ken == 0) {
     answer = "該当するお店ありません。";
   }else {
-    answer = "ken + 件ビットしました。";
+    answer = ken + " 件ビットしました。";
   }
 
   result.textContent = answer;
