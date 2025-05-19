@@ -16,8 +16,7 @@ function print(data) {
   }
 }
 //課題４−２
-let botan = document.querySelector('#botan');
-botan.onclick = function() {
+function Shop() {
   let input = document.querySelector('#keyword');
   let keyword = input.value;
 
@@ -45,6 +44,9 @@ botan.onclick = function() {
   console.log("検索キー: " + keyword);
 
 }
+let botan = document.querySelector('#botan');
+botan.addEventListener('click',Shop);
+
 // 課題5-1 の関数 printDom() はここに記述すること
 function printDom(data) {
 
