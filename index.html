@@ -77,10 +77,11 @@ botan.onclick = function() {}の中に、入力された値を読み込み、判
     </a>
     </p>
     <h2>第4回 DOM と JavaScript</h2>
-    4回目の授業です、あど二週でhtmlの授業が終わりますが、まだまだ自分のページにいろんな不足があります。今週の課題はちょっと時間かかりすぎました。まず、htmlに <label for="shimei">氏名: </label>
-    <input type="text" name="shimei" id="shimei" size="10">
-    <button id="print">表示</button>
-    <p id="message">メッセージ
+    4回目の授業です、あど二週でhtmlの授業が終わりますが、まだまだ自分のページにいろんな不足があります。今週の課題はちょっと時間かかりすぎました。まず、htmlに
+    <label for="keyword">検索キー: </label>
+    <input type="text" name="keyword" id="keyword" size="10">
+    <button id="print">検索</button>
+    <p id="message">メッセージ</p>
     を書き足して検索欄を作ることができました。inputは入力項目で、typeの属性値での入力の種類を決めることができます。例えば、textはテキストボックス、colorは色など。ブラウザによって、入力画面も違います。
     そして、document.querySelector()、カコの中にhtmlの要素名を書き込んで、その要素を取得することができます、let 変数名 = document.querySelector()で変数名にhtmlの要素を代入することが一般的な使い方です。
     また、function 名前{イベント}や変数名 = document.querySelector('button#ボタンの名前');
