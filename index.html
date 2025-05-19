@@ -21,9 +21,11 @@
     <h2>数あてゲーム</h2>
     <p>講義資料のkazuate.jsを丸コピーして課題を完成する形になっているのだが、気をつけてない間にタイトルのkazuate.jsまでコピーしそのまま貼り付けた。コンソール実行時に何度やってもエラーが出て、絶望のような時間を過ごしました、でも先輩に聞いてたら、どのくらい簡単なミスをしたかと意識して、本当に悔しかった。。
       課題自体は難しくないと思う。ほどんどjavaの書き方と変わらないSystem.out.println()をconsole.log()にすればよくて、あとは比較の時＝は三つ使うように注意しましまた。<br>
-      課題４−１更新：課題４−１ではhtmlに<input type="text" id="keyword">
-                              <button id="botan">検索</button>を書き足して検索欄を作りました。また、document.querySelector()を使ってHTMLの検索欄やボタンなどの要素を取得します。最後に、let botan = document.querySelector('#botan');
-botan.onclick = function() {}の中に、入力された値を読み込み、判定、出力する機能などの処理を書き込み、これで、ボタンを押すたびに{}の中のイベントが実行され、ユーザの入力に応じて反応することができました。
+      課題４−１更新：課題４−１では 
+    <label for="kazu">1から10の間の整数: </label>
+	  <input type="text" name="kazu" size="10" id="kazu">
+  	<button id="print">回答</button>で入力ボックスを作りました。また、document.querySelector()を使ってHTMLの入力値やボタンなどの要素を取得します。そして、let botan = document.querySelector('#botan');
+botan.onclick = function() {}の中に、入力された値を読み込み、判定、出力する機能などの処理を書き込むことができます。さらに、textContentプロパティを利用することで、ユーザーの入力内容により、ボタンを押すたびにそれに応じた結果が表示されるようになりました。
     </p>
     <p>数あてゲームのページ：
       <a
