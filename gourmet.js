@@ -4,52 +4,66 @@ function print(data) {
  let shops = data.results.shop;
 
   for (let shop of shops){
-    console.log("店舗名: " + shop.name);
-    console.log("ジャンル: " + shop.genre.name);
-    console.log("サブジャンル: " + shop.sub_genre.name);
-    console.log("住所: " + shop.address);
+    console.log("名前: " + shop.name);
     console.log("アクセス: " + shop.access);
-    console.log("最寄駅: " + shop.station_name);
+    console.log("住所: " + shop.address);
     console.log("予算: " + shop.budget.name);
-    console.log("営業日時: " + shop.open);
     console.log("キャッチコピー: " + shop.catch);
+    console.log("ジャンル: " + shop.genre.name);
+    console.log("営業時間: " + shop.open);
+    console.log("最寄駅: " + shop.station_name);
+    console.log("サブジャンル: " + shop.sub_genre.name);
   }
 }
+
 //課題４−２
 function Shop() {
+
   let input = document.querySelector('#keyword');
   let keyword = input.value;
 
-  let answer = "";
-  let ken = 0;
-  let shops = data.results.shop;
-  let result = document.querySelector('#result');
-
-  for (let i = 0;i < shops.length; i++) {
-    let shop = shops[i]
-    if (shop.genre.name == keyword) {
-      ken = ken + 1;
-    }
-  }
-
-  if (keyword == "") {
-    answer = "キーワードを入力してください。";
-  }else if (ken == 0) {
-    answer = "該当するお店ありません。";
-  }else {
-    answer = ken + " 件ビットしました。";
-  }
-
-  result.textContent = answer;
   console.log("検索キー: " + keyword);
-
+  
 }
-let botan = document.querySelector('#botan');
-botan.addEventListener('click',Shop);
 
 // 課題5-1 の関数 printDom() はここに記述すること
 function printDom(data) {
+  let resultDiv = document.querySelector('#result');
 
+  let shops = data.results.shop;
+
+  let h2 = document.createElement('h2');
+  h2.textContent = "グルメ情報（検索結果は" + shops.length + "件）";
+  resultDiv.insertAdjacentElement('beforeend',h2);
+
+  for (let i = 0; i < shops.length; i++) {
+    let shop = shops[i];
+
+    let p = document.createElement('p');
+    p.textContent = "検索結果" + (i + 1) + "件目";
+    resultDiv.insertAdjacentElement('beforeend',p);
+
+    let ul = document.createElement('ul');
+
+    let jyoho = ["名前", "アクセス", "住所", "予算", "キャッチコピー","ジャンル", "営業時間", "最寄駅", "サブジャンル"];   
+    let values = [
+      shop.name,
+      shop.access,
+      shop.address,        
+      shop.budget.name,
+      shop.catch,
+      shop.genre.name,
+      shop.open,
+      shop.station_name,
+      shop.sub_genre.name
+      ];
+    for (let i = 0;i < jyoho.length; i++) {
+      let li = document.createElement('li');
+      li.textContent = jyoho[i] + ": " + values[i];
+      ul.insertAdjacentElement('beforeend',li);
+    }
+    resultDiv.insertAdjacentElement('beforeend',ul);
+  }
 }
 
 // 課題6-1 のイベントハンドラ登録処理は以下に記述
