@@ -112,48 +112,48 @@ function sendRequest() {
     h4s.textContent = "探したい語句を教えてね ヽ(・∀・)ノ";
     resultDiv.insertAdjacentElement('beforeend', h4s);
     return;
-  } else if (genre == "居酒屋") {
-    genre = "G001";
-  } else if (genre == "ダイニングバー・バル") {
-    genre = "G002";
-  } else if (genre == "創作料理") {
-    genre = "G003";
-  } else if (genre == "和食") {
-    genre = "G004";
-  } else if (genre == "洋食") {
-    genre = "G005";
-  } else if (genre == "イタリアン・フレンチ") {
-    genre = "G006";
-  } else if (genre == "中華") {
-    genre = "G007";
-  } else if (genre == "焼肉・ホルモン") {
-    genre = "G008";
-  } else if (genre == "アジア・エスニック料理") {
-    genre = "G009";
-  } else if (genre == "各国料理") {
-    genre = "G010";
-  } else if (genre == "カラオケ・パーティ") {
-    genre = "G011";
-  } else if (genre == "バー・カクテル") {
-    genre = "G012";
-  } else if (genre == "ラーメン") {
-    genre = "G013";
-  } else if (genre == "カフェ・スイーツ") {
-    genre = "G014";
-  } else if (genre == "その他グルメ") {
-    genre = "G015";
-  } else if (genre == "お好み焼き・もんじゃ") {
-    genre = "G016";
-  } else if (genre == "韓国料理") {
-    genre = "G017";
+  } 
+  let keywords = [
+    "居酒屋",
+    "ダイニングバー・バル",
+    "創作料理",
+    "和食",
+    "洋食",
+    "イタリアン・フレンチ",
+    "中華",
+    "焼肉・ホルモン",
+    "アジア・エスニック料理",
+    "各国料理",
+    "カラオケ・パーティ",
+    "バー・カクテル",
+    "ラーメン",
+    "カフェ・スイーツ",
+    "その他グルメ",
+    "お好み焼き・もんじゃ",
+    "韓国料理"
+  ];
+  let codes = [
+  "G001","G002","G003","G004","G005","G006","G007","G008",
+  "G009","G010","G011","G012","G013","G014","G015","G016","G017"
+  ];
+  for (let i = 0; i < keywords.length; i++) {
+    if (genre === keywords[i]) { 
+      genre = codes[i];
+      break; 
+    }else if (i === keywords.length - 1) {
+      let h4s = document.createElement('h4');
+      h4s.textContent = "該当するお店ありません";
+      resultDiv.insertAdjacentElement('beforeend', h4s);
+      return;
+    }
   }
-
   let url = 'https://www.nishita-lab.org/web-contents/jsons/hotpepper/' + genre + '.json';
 
   axios.get(url)
     .then(showResult)  
     .catch(showError)  
-    .then(finish);    
+    .then(finish);
+  
 }
 
 // 課題6-1: 通信が成功した時の処理は以下に記述

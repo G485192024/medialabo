@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>My test page</title>
+    <title>「Webコンテンツ作成」の成果</title>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
@@ -11,21 +11,29 @@
     <p>この授業では先行する情報工学の専門科目の基礎知識を応用して実践的な能力を修得することが目的です。
        個人的な目標としてはちゃんと授業内容を踏まえてHTML等を用いたWebページ作成ができるようになることです。
     </p>
+    
     <h2>プロジェクト課題について</h2>
-    <p>グルメ情報を選びます。(200)</p>
+    <p>プロジェクト課題はグルメ情報を選びました。先生の紹介は三つの内容の中では二番目のむずがしさがあるだそうです。
+       簡単だから選んだわけだはなく、自分が八王子市に住んでいるから、グルメ情報を知って、何食べるか迷っている時に自分も使えるからです。
+      1回目の課題では、具体的な情報をli、ulなどに書けて、htmlに表示されるようにすばいいだけだったけど、最終の課題はhtmlに検索欄だけの状態にして
+      キーワードを入力して、検索する機能を実現するような課題です。6回の授業を通して、何とか検索機能を実現したけど、さすがに難しいし、時間がかかる課題でした。
+      詳しい点は感想のところに書きます。</p>
     <p>プロジェクト課題で作成したページ：
       <a href="project.html"
       title="プロジェクト課題です"
       target="_blank">プロジェクト課題</a>
     </p>
+
     <h2>数あてゲーム</h2>
-    <p>講義資料のkazuate.jsを丸コピーして課題を完成する形になっているのだが、気をつけてない間にタイトルのkazuate.jsまでコピーしそのまま貼り付けた。コンソール実行時に何度やってもエラーが出て、絶望のような時間を過ごしました、でも先輩に聞いてたら、どのくらい簡単なミスをしたかと意識して、本当に悔しかった。。
-      課題自体は難しくないと思う。ほどんどjavaの書き方と変わらないSystem.out.println()をconsole.log()にすればよくて、あとは比較の時＝は三つ使うように注意しましまた。<br>
+    <p>講義資料のkazuate.jsを丸コピーして課題を完成する形になっているのだが、タイトルのkazuate.jsまでコピーしそのまま貼り付けたのを気づいてなくて、
+      コンソール実行時に何度やってもエラーが出て、絶望な1時間を過ごしました、でも先輩に聞いてたら、どのくらい簡単なミスをしたかと意識して、本当に悔しかった。
+      課題自体はほどんどjavaの書き方と変わってなく、System.out.println()をconsole.log()に変わっただけで難しくないと思います。あとは比較の時＝は三つ使うように注意しましまた。<br>
       課題４−１更新：課題４−１では 
-    <label for="kazu">1から10の間の整数: </label>
-	  <input type="text" name="kazu" size="10" id="kazu">
-  	<button id="print">回答</button>で入力ボックスを作りました。また、document.querySelector()を使ってHTMLの入力値やボタンなどの要素を取得します。そして、let botan = document.querySelector('#botan');
-botan.onclick = function() {}の中に、入力された値を読み込み、判定、出力する機能などの処理を書き込むことができます。さらに、textContentプロパティを利用することで、ユーザーの入力内容により、ボタンを押すたびにそれに応じた結果が表示されるようになりました。
+    <img src="kazuate.png" alt="数当て回答欄" width="400">
+    で入力ボックスを作りました。また、document.querySelector()を使ってHTMLの入力値やボタンなどの要素を取得します。
+      そして、let botan = document.querySelector('#botan');
+      botan.onclick = function() {}の中に、入力された値を読み込み、判定、出力するなどの処理を書き込むことができます。
+      さらに、textContent = を利用することで、htmlの内容を更新し、ユーザーの入力内容に相応する回答がボタンを押すたびに表示されるようになりました。
     </p>
     <p>数あてゲームのページ：
       <a
@@ -34,9 +42,12 @@ botan.onclick = function() {}の中に、入力された値を読み込み、判
       target="_blank">数あてゲームのHTMLファイル
     </a>
     </p>
+
     <h1>各授業回の学習事項</h1>
+
     <h2>第1回 WWW と HTML</h2>
-    <p>初めてhtmlの授業を受けて色々学びました。ほどんどの符号が<>で囲んでいるとわかりました、そのほかにも&lt;を使って<>を普通の文字として表現するなども学びました。自分の編集で真っ白のホームページから情報いっぱい入力してとても達成感を感じました。これからの授業楽しんでいます。</p>
+    <p>初めてhtmlの授業を受けて色々学びました。ほどんどの符号が<>で囲んでいるとわかりました、そのほかにも&lt;を使って<>を普通の文字として表現するなども学びました。
+      自分の編集で真っ白のホームページから情報いっぱい入力してとても達成感を感じました。これからの授業楽しんでいます。</p>
     <p>演習の成果：
       <a
         href="practice-html/elements.html"
@@ -44,10 +55,11 @@ botan.onclick = function() {}の中に、入力された値を読み込み、判
         target="_blank">演習1-4のHTMLファイル
       </a>
     </p>
+
     <h2>第2回 CSS による Web ページの装飾</h2>
     <p>2回目の授業で色なhtmlの装飾法を学びました。まずは、HTML の head 要素に追加で次の link 要素を記述します．
-      <img src="stylesheet.png" alt="linkタグのコード例" width="400">これでCSS のファイル「style.css」に従ってページを装飾できるようになりました
-      次にはcolorで文字の色の変更、class="special"や.specialの連動で特定の要素の指定を学びました。そしてリンクをクリックすると色が変わる機能をa:link {
+      <img src="CSS.png" alt="linkタグのコード例" width="400">これでCSS のファイル「style.css」に従ってページを装飾できるようになりました
+      次にはcolorで文字の色の変更、class="special"や.specialの連動で特定の要素の指定を学びました。そしてa:link {
         color: pink;
       }
       
@@ -57,7 +69,7 @@ botan.onclick = function() {}の中に、入力された値を読み込み、判
       
       a:hover {
         text-decoration: none;
-      }でできました。そのほかにもborder-bottomの変更、padding、height、widthなどを学びました</p>
+      }でクリックしたら色が変わる機能ができました。そのほかにもborder-bottomの変更、padding、height、widthなどを学びました</p>
       <p>演習の成果：
         <a
         href="practice-css/browser-intro.html"
@@ -65,11 +77,15 @@ botan.onclick = function() {}の中に、入力された値を読み込み、判
         target="_blank">演習2-3のHTMLファイル
       </a>
       </p>
+
     <h2>第3回 JavaScript の基本</h2>
-    <p>3回目の授業になりました。今回では新しい言語『JavaS cript』について学びました。まず、CSSのように、外部のJavaScriptを追加するには、<script src="hello.js" defer></script>でHTML の head 要素に script 要素を追加することが必要です
-      console.log('こんにちは');で文書を表示することができる、考えたらjavaのSystem.out.printの役割をしているのではないかと思いました。でもjavaと違うのは、Javascriptではlet一つでいろんな変数を定義できておても覚えやすいです。
+    <p>3回目の授業になりました。今回では新しい言語『JavaScript』について学びました。
+      まず、CSSのように、外部のJavaScriptを追加するには、
+      <img src="JavaScript.png" alt="外部のJavaScriptの追加方法" width="400">でHTML の head 要素に script 要素を追加することが必要です
+      console.log('こんにちは');でコンソールに文書を出力することができる、考えたらjavaのSystem.out.printの役割をしているのではないかと思いました。
+      でもjavaと違うのは、Javascriptではlet一つでいろんな変数を定義できておても覚えやすいです。
       それで for-of 構文for (let n of ns) {} カッコのなかのコマンドにより配列の要素1つずつに対してその処理をすることを学びました。
-      だんだん難しくなっていると感じたけど、頑張りたいと思います。
+      内容がだんだん難しくなっていると感じたけど、頑張りたいと思います。
     </p>
     <p>演習の成果：
       <a
@@ -78,16 +94,17 @@ botan.onclick = function() {}の中に、入力された値を読み込み、判
       target="_blank">演習3-6のHTMLファイル
     </a>
     </p>
+
     <h2>第4回 DOM と JavaScript</h2>
     <p>4回目の授業です、あど二週でhtmlの授業が終わりますが、まだまだ自分のページにいろんな不足があります。今週の課題はちょっと時間かかりすぎました。まず、htmlに
-    <label for="keyword">検索キー: </label>
-    <input type="text" name="keyword" id="keyword" size="10">
-    <button id="print">検索</button>
-    <p id="message">メッセージ</p>
-    を書き足して検索欄を作ることができました。inputは入力項目で、typeの属性値での入力の種類を決めることができます。例えば、textはテキストボックス、colorは色など。ブラウザによって、入力画面も違います。
-    そして、document.querySelector()、カコの中にhtmlの要素名を書き込んで、その要素を取得することができます、let 変数名 = document.querySelector()で変数名にhtmlの要素を代入することが一般的な使い方です。
+    <img src="kenssakuran.png" alt="検索欄の作り方" width="400">
+    を書き足して検索欄を作ることができました。inputは入力項目で、typeの属性値での入力の種類を決めることができます。
+    例えば、textはテキストボックス、colorは色など。ブラウザによって、入力画面も違います。
+    そして、document.querySelector()、カコの中にhtmlの要素名を書き込んで、その要素を取得することができます。
+    let 変数名 = document.querySelector()で変数名にhtmlの要素を代入することが一般的な使い方です。
     また、function 名前{イベント}や変数名 = document.querySelector('button#ボタンの名前');
-    変数名.addEventListener('click', 名前);でイベントハンドラを登録することができます。今回はこれを使って数あてゲームでボタンを押すと入力により出力をすることができるようにしました。
+    変数名.addEventListener('click', 名前);でイベントハンドラを登録することができます。
+    今回はこれを使って数あてゲームにボタンを押すとユーザの入力値に応じて結果を表示する機能を装着しました。
     </p>
     <p>演習の成果：
       <a
@@ -96,6 +113,52 @@ botan.onclick = function() {}の中に、入力された値を読み込み、判
       target="_blank">演習4-10のHTMLファイル
     </a>
     </p>
+
     <h2>第5回 イベント処理</h2>
+    
+    <p>いよいよ第五回になりました、あと一回で授業終わりになるけど、プロジェクト課題まだ装飾してなくてこれから頑張らないといけないと思っています。
+      今回は前回の続きで、主に学んだのはcreateElement(要素名) ... 要素を新規作成、
+      要素1.insertAdjacentElement('beforeend', 要素2) ... 要素1の内部に要素2を配置
+      要素1.insertAdjacentElement('afterend', 要素2) ... 要素1の直後に要素2を配置と、
+      前回のlet 変数名 = document.querySelector('要素1#要素2')で要素を特定し、要素名.removeで削除することです。
+      さらにこれらをfunctionの中に書き込んで、前回で習ったイベント処理の登録をして、ボタンを押すとユーザの入力に応じて検索結果を出力することが可能になります。
+      プロジェクト課題の検索機能を実現するに一番大事なところです。
+    </p>
+    <p>演習の成果：
+      <a
+      href="practice-dom2/dom2-exercise.html"
+      title="演習5-7のHTMLファイルです"
+      target="_blank">演習5-7のHTMLファイル
+     </a>
+    </p>
+
+    <h2>工夫点，苦心点，強調点，感想</h2>
+    <p>プロジェクト課題が最終の課題なので、6回目の授業が終わった時点でこれまでプロジェクト課題やる時の工夫点，苦心点，強調点，感想で繰り返してまとめたいと思います。
+      まずはhtmlの書き方です。2回目の授業に<img src="CSS.png" alt="linkタグのコード例" width="400">でCSS のファイル「style.css」に従ってページを装飾する、
+      次に4回目の授業では<img src="kenssakuran.png" alt="検索欄の作り方" width="400">を書き足して検索欄を作る、最後の授業で
+      <img src="通信処理.png" alt="通信処理のやり方" width="400">AJAX 通信などの機能を装着してからもう、編集が終わりました。
+      それで、二番目に紹介するけど、これまで学んだ知識の中では一番だいじなJavaScriptの工夫点です。
+      課題順に言うと、まずは課題3-2。初めてJavaScript勉強しました。
+      for-of 構文で配列の要素1つずつに対して処理を実行することができました。これがJavaでのFor構文と同じような機能をしていて、とても便利です。
+      第4回ではもうイベント処理を学んだが、まだプロジェクト課題に書いていません。
+      第5回にはgourmet.jsのしたに書いてある内容を引用し、htmlに表示するというFunctionを書いたが、
+      ここまでイベントはボタンに登録していないから、コンソールで実行して結果を見るしかない。
+      6回目はいよいよ本題に入りました。まずはページ上の検索ボタン等をクリックした時のイベントハンドラとして sendRequest() を登録し、
+      それで、sendRequest()で，検索用 URL を作って、Ajax 通信によりリクエストを送信します 
+      あとは、通信に成功した場合にレスポンスを受け取る関数は showResult()
+      この関数の中で data を取り出して printDom(data) を呼び出します。これはなかなか難しくて、授業資料でもらったものを参考しました。
+      通信に失敗したときと，通信終了の関数 showError() と finish()を書きました。
+      通信終了は変更しなくて大丈夫と言われて、コピペ〜で終わりました。楽でしたね。
+      最後にCSSなんだけど、だいぶ前にやったことだし、もうだいぶ忘れてしまい、参考資料を結構利用しました。
+    </p>
+    <h2>参考文献：</h2>
+    <p><a
+      href="https://developer.mozilla.org/ja/docs/Web/CSS/font-style" title="font-style" target="_blank">font-style</a></p>
+    <p><a
+      href="https://developer.mozilla.org/ja/docs/Web/CSS/font-family" title="font-family" target="_blank">font-family</a></p>
+    <p><a
+      href="https://developer.mozilla.org/ja/docs/Web/CSS/border-bottom-style" title="border-bottom-style" target="_blank">border-bottom-style</a></p>
+    <p><a
+      href="https://developer.mozilla.org/ja/docs/Web/CSS/border" title="border" target="_blank">border</a></p>
   </body>
 </html>
